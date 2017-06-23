@@ -1,0 +1,38 @@
+
+
+Class MainWindow
+
+ Sub RunCode (Sender As Object, e As RoutedEventArgs)   dim unknownType
+    
+    Dim myString As String = "Hello World"  
+    Dim myNumber As Integer = 42  
+    Dim myDate As Date = DateValue("November 28, 2013")
+    
+    unknownType = myString
+    
+    Dim myString2  = "Hello World"  
+    Dim myNumber2  = 42  
+    Dim myDate2  = DateValue("November 28, 2013")
+    
+    Output(myString)  
+    Output(myNumber)  
+    Output(myDate)
+    
+ End Sub
+ 
+ Sub Output (Value As String)  
+    txtOutput.Text += Value + vbCrLf
+ End Sub
+ 
+ Sub ClearOutput(Sender As Object, e As RoutedEventArgs)  
+    txtOutput.Text = " "
+ End Sub
+ 
+End Class
+
+
+
+
+
+Notes: Placing code in RunCode Sub routine or method. Starting with a string.This declaration contains all four parts: The dim keyword, the variable name, the data type, and the value. 
+Next, we declare variables of a couple of diff data types. A string, a number,and a date. Then we set the data type of a number by setting the data type to integer.Then, we set the third data type of a date and return its value. Visual basic can be treated as a static or dynamic language. These first three declarations (DimmyString, Dim myNumber, and Dim myDate are) are static declarations. The next 3declarations, however, are dynamic delarations. The data types of the varliables are determined by the values that are being assigned. But, internally, the complieris inferring the literal values of the data and setting the data type without havingto say it explicitly (for ex. setting it to "As String" or "As Integer" or "As Date")
