@@ -1,0 +1,53 @@
+
+
+
+
+
+Class MainWindow  
+
+  Sub RunCode (sender As Object, e As RoutedEventArgs)
+    
+    Dim bytel As Byte = 255  
+    Dim int1 As Integer = 55  
+    Dim dbl1 As Double = 55.5  
+    Dim str1 As String = txtInput.Text
+    
+    If IsNumeric(str1) Then   
+      Dim intFromString As Integer = Intger.Parse(str1)   
+      Output("You Entered ") + intFromString.ToString())  
+    
+    Else   
+      Output("The value isn't numeric")  
+    End If
+  
+    Dim dbl2 As Double = int1  
+    Output("The value of dbl2 is: " + dbl2.ToString)
+  
+    Try   
+      Dim byte2 As Byte Convert.ToByte(int1)   
+      Output("The value of dbl2 is: " + dbl2.ToString)  
+    Catch ex As Exception   
+      Output(ex.Message)
+      
+    End Sub 
+ 
+    Sub Output(Value As String)  
+      txtOutput.Text += Value + vbCrLf
+      
+    End Sub
+    
+    Sub ClearOutput(sender As Object, e As RoutedEventArgs)  
+      txtOutput.Text = " "
+      
+    End Sub 
+    
+End Class
+
+
+Converting Numeric Data Types
+All numeric data type classes have a Parse () method. 
+Dim strValue As String = 1024Dim intValue As Integer = Integer.Parse(strValue)
+Conversion Funtions
+convert class methods
+Convert.toInteger(), Convert.toDouble() for example. 
+How to convert from a string to a number using the parse method. And from a numberto a string using the ToString method. Then we learned how to take an integer valueand convert it to a double. (widening the value) 
