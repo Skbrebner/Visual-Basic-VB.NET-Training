@@ -1,0 +1,46 @@
+Class MainWindow
+  
+  Sub RunCode(sender As Object, e As RoutedEventArgs)
+ 
+    Dim hello As String = "Hello from Visual Basic"  
+            Output(hello)
+            
+    Dim howdy As String = New String("howdy")  
+        Output(howdy)
+            
+    Dim words As Array = hello.Split() 
+    For Each word As String In words   
+        Output(word)
+        
+    Next
+    
+    Dim letters As Char() = howdy.ToCharArray()  
+    For Each letter As Char In letters   
+        Output(letter)
+        
+    Next
+  
+    Dim numeric As Decimal = 45000  
+    Dim strNumeric As String = Format()
+    
+  End Sub
+ 
+  Sub Output(Value As String)  
+    txtOutput.Text +=Value + vbCrLf
+    
+  End Sub
+ 
+  Sub ClearOutput(sender As Object, e As RoutedEventArgs)  
+    textOutput.Text = ""
+    
+  End Sub
+ 
+End Class
+
+
+
+
+
+
+'Strings, words, and characters. 
+When you declare a variable (Dim hello) as a string, and you assign a literal string(hello from visual basic), what you are doing is creating as instance ofthe string class. You can make other notation that makes that a little more clear by adding another vairable, setting it as a string, then using the keyword'new' and the constructor method of the string class 'New String'  (it has the same name of the class that it belongs to and it returns an instance of that class). There are 3 diff. versions of the constructor method for this class. An array is an ordered set of data. Whatever order its put in, it stays in that order unless me, the programmerchanges it. We are going to break up these strings into arrays usinga couple of different ways. First, Using a method of the string class, split, to break up the arrayof 'In words' (hello from Visual Basic). set a variable called 'words' and set its data type as an array.We will call the 'hello' variables' "Split" method. The split method by default looks for spaces, andwherever it finds a space character, it breaks up the strings. So, we should get back an array of 4 words. To test it, we need to loop through the array. Using new syntax 'For Each', then a new variable called word,we set the new data type as "As String", then pass in the array, 'words'. Then 'Next' (looping construct)is automatically added. It will loop through the array, and for each word it finds (each string it finds afterparsing), it will execute the code between the 'For' and the 'Next'. Then, to do this, use the Output method and passin the variable 'word'. You can also break up a string into individual characters. You can do this with a method of the string class called 'To Char Array'. We will set the data type of variable 'letters' as a specific array, 'As Char. The value is equal to the word youd like to split, (in this case howdy), and it will split it one letter at a time. Finally, we can fomat numeric values. VB has built in functions called format and format currency to take stringsor numbers and apply specific formatting. A numeric literal can not have any commas or spaces. Then we declare anew string calles strNumeric as a string datatype. We set its value to the format function, which takes two arguements- the value you want to format and a style ' 
