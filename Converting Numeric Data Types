@@ -45,4 +45,5 @@ Dim strValue As String = 1024Dim intValue As Integer = Integer.Parse(strValue)
 Conversion Funtions
 convert class methods
 Convert.toInteger(), Convert.toDouble() for example. 
-How to convert from a string to a number using the parse method. And from a numberto a string using the ToString method. Then we learned how to take an integer valueand convert it to a double. (widening the value) 
+How to convert from a string to a number using the parse method. And from a numberto a string using the ToString method. 
+Then we learned how to take an integer valueand convert it to a double. (widening the value) 
