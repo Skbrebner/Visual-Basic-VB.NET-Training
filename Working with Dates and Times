@@ -41,7 +41,17 @@ End Class
 
 
 Working with dates and times. 
-In visual basic, the date value contains both the date and the time.first, set a variable, as a 'Date' datatype. The "Date" datatype is an aliasfor an underlying data type thats part of the run time. Create an instanceof the Date class.this is represented as = New Date ( ) One of these instancesis (year As Integer, month As Integer, day As Integer). For the second dimwe will use a date literal (values wrapped in hash marks or pound signs and they are strictly formatted date values with the mo and day and 4 digit year).The third way to work with dates is to call the method Date.Parse and passa string through it. In this method, you can pass through a 2 digit year or 4 digit year. With the parse method, you can also add in time values. 
-The format function can also be used to format dates. First we datatype thevariable strDate1 as a string. Then , set the value of strDate1 using the Formatfunction. We'll pass in dt1, our date/time object, and then pass in a style, or mask, of MMM. The result is a formatted string is outputted as "Nov 28, 2013".
-New statement- custom output method, the use of the Today property of the Date class, and a custom formatting string. This will return an output ofthe month and day without the year. 
-Do do a little math, we'll output the original date: as the d1 string. Then, well add one day and one month to that date value. We use methods of the Date class called AddDays, AddMonths, AddYears, and so on. 
+In visual basic, the date value contains both the date and the time.first, set a variable, as a 'Date' datatype. 
+The "Date" datatype is an aliasfor an underlying data type thats part of the run time. Create an instanceof the Date class.
+this is represented as = New Date ( ) One of these instancesis (year As Integer, month As Integer, day As Integer). 
+For the second dimwe will use a date literal (values wrapped in hash marks or pound signs and they are strictly
+formatted date values with the mo and day and 4 digit year).The third way to work with dates is to call
+the method Date.Parse and passa string through it. In this method, you can pass through a 2 digit year or 4 digit year. 
+With the parse method, you can also add in time values. 
+The format function can also be used to format dates. First we datatype thevariable strDate1 as a string. 
+Then , set the value of strDate1 using the Formatfunction. We'll pass in dt1, our date/time object, and then pass 
+in a style, or mask, of MMM. The result is a formatted string is outputted as "Nov 28, 2013".
+New statement- custom output method, the use of the Today property of the Date class, and a custom formatting string. 
+This will return an output ofthe month and day without the year. 
+Do do a little math, we'll output the original date: as the d1 string. Then, well add one day and one month to that date
+value. We use methods of the Date class called AddDays, AddMonths, AddYears, and so on. 
