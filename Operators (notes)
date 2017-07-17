@@ -1,0 +1,45 @@
+
+An operator is a character or a string of characters that cause a particular behavior in your programming. 
+Types of operators: 
+Arithmetic   - VB mostly uses conventional math symbols. + for addition, - for subtraction, * for multiplication/ for division,  ^ for exponentiation, and \ for integer division. ( x= 23\5 )  outputs 4. Its the value of the number returned, without the remaining value. For modulus operators, use Mod .  
+Assignment  - The = operator assigns a value (on the right) to a variable (on the left). 
+ex. FirstName = "David" Age = 39 Date= #11/28/1974#
+ For complex assignment operators, theey combine math or Concatenation with assignment. 
+ FullName = "David" FullName += "Jones"
+ Age = 39 Age += 1
+Visual basic does not support the increment operator "++" like in c-style languages. The "++" means add one. 
+int x = 15;x ++;                                // result is 16
+x ++  is C lanugages , x += 1 is VB
+When working with numbers, combine = with any mathematical operator. +=, -=, *=, /=, \= . 
+
+Comparison  -
+Once we get into conditional code, if then statements, youll need to put together logical expressions. Expressions that evaluate to either true or false. 
+Other than assigning a value, the = operater can mean equality. ex.  If x = y Then For ineuqlity, use the <> operator     ex.  If x <> y ThenLess than , use the < operator         ex. If x < y ThenGreater than, use the > operator     ex. If x > y Then LEss than or equal <=                  ex If x <= y ThenGreater than or equal >=      ex If x >= y Then
+You can use numeric comparison operators above to compare strings. 
+**VB is not case sensitive in terms of syntax, when you compare the string values to eachother, they need to match in string value. Because the values below are wrapped in quotes, they are valued at strings. 
+If "Xyz" = "Xyz" Then     'TrueIf "Xyz" = "XYZ" Then     'False   *(case sensitive when comparing string values)If "73" < "9" Then        'True'   (Alpha Comparison) Becayse the numbers are wrapped in quotes, they areevaluated as strings. If "abc" < "abcd" Then    'True'   (if one value is a substring of the other, then the second one is Greaterthan the first one)
+The 'like' operator supports string pattern matching with these characters--->
+?   Any single character*   Zero of more characters#   Any numeric digit (0-9)[charlist]  Any single character in the list     (charlist stands for 'character list')[! charlist]  Any single character not in the list. 
+Use of these string based comparisons depends of declaration called Option Compare (text or binary)
+
+
+You can compare objects with eachother (instances of visual basic classes). The operators are called 'Is' and 'IsNot'to compare object references. 
+Dim Reference1 as Object = New Object()
+Dim Reference2 = Reference1
+
+If Reference1 Is Reference2 Then  'True  
+...process references
+End If
+
+
+Comparing object types- 
+Use TypeOf and Is  to compare object types. 
+Dim MyString as String = New String("Hello!")
+If TypeOf Mystring Is System.String Then    'True!...process referencesEnd If
+This code declares an instance of the string class. Then its asking whether the new object or new variable is an instance of System.String. System.String is the fully qualified name of the string class. 'System' is called the assembly, and string is the class name. and, if this variable (New String Hello) is an instance of that class, then the type of operator returns true. 
+
+Logical Operators
+Whenever you create a logical expression that returns true or false, you can reverse the logic by prefixingthe expression with the Not operator. 
+Concatenation 
+
+
